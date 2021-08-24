@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>2. Customizing Plots</title>
+    <meta charset="utf-8" lang="fr"/>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <!--  HIGHLIGHT JS  -->
+    <!-- Monokai Sublime -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai-sublime.min.css">
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Cf. https://highlightjs.org/usage/ for more info -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+    <!-- datacamp-light -->
+    <script async src="https://cdn.datacamp.com/dcl-react.js.gz"></script>
+
+    <!-- My scripts -->
+    <script type="text/javascript" src="./onload_funcs.js"></script>
+
+    <!-- To use Font Awesome Directional Icons -->
+    <!-- Documentation: https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  </head>
+
+  <body>
+
+    <div class="video-player">
+        <video controls>
+            <source src="./videos/v04.mp4" class="viewer" type="video/mp4">
+        </video>
+        <div class="player-controls">
+            <div class="left-controls">
+            <div class="skip">
+                <button type="button" class="skip-backward-btn skip-btn player-btn" data-skip="-1"><i class="material-icons">fast_rewind</i></button>
+                <input type="text" class="skip-time" value="10" maxlength="3">
+                <button type="button" class="skip-forward-btn skip-btn player-btn" data-skip="1"><i class="material-icons">fast_forward</i></button>
+            </div>
+            </div>
+            <div class="right-controls">
+            <button type="button" class="settings-btn player-btn" aria-haspopup="true" aria-label="Settings" aria-owns="id-1" data-tooltip-target-id="settings-btn" style title="Settings" aria-expanded="false"><i class="material-icons">menu</i></button>
+            <div class="settings-options">
+                <div class="s-option">
+                <input type="range" value="1" min="0.5" max="3" step="0.1" class="playback-rate-input setting-input">
+                <p class="s-option-par">Playback rate (<span class="playback-rate-display">1</span>)</p>
+                </div>
+                        <div class="s-option">
+                <input type="range" value="480" min="100" max="1080" step="20" class="size-input setting-input">
+                <p class="s-option-par">(Size)</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
